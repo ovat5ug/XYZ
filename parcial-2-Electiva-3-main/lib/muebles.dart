@@ -46,89 +46,90 @@ class muebles extends StatelessWidget {
                     //bottom: 30,
                     top: 30,
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Column(
-                          children: [
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Container(
-                                height:
-                                    120, //altura del obeto pantalla principal
-                                width:
-                                    120, //anchura del obeto pantalla principal
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  image: DecorationImage(
-                                    image: AssetImage(image),
-                                    fit: BoxFit
-                                        .contain, //pone en contenedor la imagen
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Column(
+                            children: [
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Container(
+                                  height:
+                                      120, //altura del obeto pantalla principal
+                                  width:
+                                      120, //anchura del obeto pantalla principal
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    image: DecorationImage(
+                                      image: AssetImage(image),
+                                      fit: BoxFit
+                                          .contain, //pone en contenedor la imagen
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              //INICIO titulo
-                              title,
-                              style: const TextStyle(
-                                  fontSize: 17.0,
-                                  fontWeight: FontWeight.w900,
-                                  letterSpacing: 1,
-                                  color: Colors.white),
-                            ), //FIN titulo
-                            const SizedBox(
-                              height: 0.01,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  //INICIO precio
-                                  "\$" + price,
-                                  style: const TextStyle(
-                                      fontSize: 13.0,
-                                      fontWeight: FontWeight.w900,
-                                      letterSpacing: 1,
-                                      color: Colors.white),
-                                ), //FIN precio
-                                const SizedBox(
-                                  height: 40.0,
-                                ),
-                                Container(
-                                  //INICIO añadir compra
-                                  alignment: Alignment.center,
-                                  height: 27,
-                                  width: 27,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    color: Color(0xff7025c),
-                                  ),
-                                  child: Icon(
-                                    Icons.add,
-                                    color: Colors.white,
-                                    size: 22,
-                                  ),
-                                ) //FIN añadir compra
-                              ],
-                            )
-                          ],
+                        const SizedBox(
+                          height: 20.0,
                         ),
-                      )
-                    ],
+                        Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                //INICIO titulo
+                                title,
+                                style: const TextStyle(
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.w900,
+                                    letterSpacing: 1,
+                                    color: Colors.white),
+                              ), //FIN titulo
+                              const SizedBox(
+                                height: 0.01,
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    //INICIO precio
+                                    "\$" + price,
+                                    style: const TextStyle(
+                                        fontSize: 13.0,
+                                        fontWeight: FontWeight.w900,
+                                        letterSpacing: 1,
+                                        color: Colors.white),
+                                  ), //FIN precio
+                                  const SizedBox(
+                                    height: 40.0,
+                                  ),
+                                  Container(
+                                    //INICIO añadir compra
+                                    alignment: Alignment.center,
+                                    height: 27,
+                                    width: 27,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      color: Color(0xff7025c),
+                                    ),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.white,
+                                      size: 22,
+                                    ),
+                                  ), //FIN añadir compra
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
