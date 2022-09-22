@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Parcial 2 , sillas hermosas del camino feliz',
+      title: 'Parcial 2 , Tortas el SARCO',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(227, 34, 6, 90),
+        scaffoldBackgroundColor: Color.fromARGB(226, 226, 222, 233),
       ),
       home: HomePage(),
     );

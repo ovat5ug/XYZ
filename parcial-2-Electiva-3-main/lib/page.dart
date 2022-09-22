@@ -47,11 +47,23 @@ class _HomePageState extends State<HomePage>
             SizedBox(
               height: size.height * 0.03,
             ),
+
+            //dibuja la imagen
+            Container(
+              width: 180,
+              height: 180,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(
+                          'assets/img/135579140_248966746754779_1436238107869001113_n.jpg'),
+                      fit: BoxFit.cover),
+                  borderRadius: BorderRadius.circular(10)),
+            ),
             SizedBox(
               height: size.height * 0.02,
             ),
             const Text(
-              "Comercial SIVAR",
+              "TORTAS EL SARCO",
               style: TextStyle(
                 color: Color.fromARGB(255, 255, 253, 253),
                 fontSize: 30.0,

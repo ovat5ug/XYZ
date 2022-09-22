@@ -58,9 +58,9 @@ class muebles extends StatelessWidget {
                                 scrollDirection: Axis.horizontal,
                                 child: Container(
                                   height:
-                                      120, //altura del obeto pantalla principal
+                                      120, //altura del objeto pantalla principal
                                   width:
-                                      120, //anchura del obeto pantalla principal
+                                      120, //anchura del objeto pantalla principal
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     image: DecorationImage(
