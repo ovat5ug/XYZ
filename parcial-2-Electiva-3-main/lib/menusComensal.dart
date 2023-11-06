@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:parcial2_etps3/muebles.dart';
-import 'package:parcial2_etps3/muebles.dart';
+import 'package:parcial2_etps3/comestibles.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -49,15 +48,23 @@ class _HomePageState extends State<HomePage>
             ),
 
             //dibuja la imagen
-            Container(
-              width: 180,
-              height: 180,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                          'assets/img/135579140_248966746754779_1436238107869001113_n.jpg'),
-                      fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(10)),
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: new AssetImage(
+                                'assets/img/135579140_248966746754779_1436238107869001113_n.jpg'),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(10)),
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: size.height * 0.02,
@@ -92,7 +99,7 @@ class _HomePageState extends State<HomePage>
                       fontSize: 16,
                       color: Colors.black.withOpacity(0.3),
                     ),
-                    hintText: "Buscar"),
+                    hintText: "Busca tú Combo"),
               ),
             ),
             SizedBox(
@@ -109,19 +116,19 @@ class _HomePageState extends State<HomePage>
               controller: _tabController,
               tabs: const [
                 Tab(
-                  text: "sillas",
+                  text: "Hamburguesa",
                 ),
                 Tab(
-                  text: "Muebles",
+                  text: "Pizza",
                 ),
                 Tab(
-                  text: "Camas",
+                  text: "Pollo",
                 ),
                 Tab(
-                  text: "cunas",
+                  text: "Tacos",
                 ),
                 Tab(
-                  text: "cuadros",
+                  text: "pupas",
                 ),
               ],
             ),
@@ -134,46 +141,37 @@ class _HomePageState extends State<HomePage>
                 ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    muebles(
-                      "assets/pict/s1.png",
-                      "silla gris",
-                      "hola",
+                    menus(
+                      "assets/pict/hamburguesa01.png",
+                      "rica hamburguesa",
+                      "test",
                       "36.99",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/s2.png",
-                      "silla verde",
-                      "hola",
+                    menus(
+                      "assets/pict/hamburguesa02.png",
+                      "cangreburger",
+                      "test",
                       "47.50",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/s3.png",
-                      "silla naranja",
-                      "hola",
+                    menus(
+                      "assets/pict/hamburguesa03.png",
+                      "hamburguesa celestial",
+                      "test",
                       "29.99",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/s4.png",
-                      "silla roja",
-                      "hola",
-                      "25.00",
-                    ),
-                    const SizedBox(
-                      width: 15.0,
-                    ),
-                    muebles(
-                      "assets/pict/s5.png",
-                      "silla blanca",
-                      "hola",
+                    menus(
+                      "assets/pict/hamburguesa05.jpg",
+                      "hamburguesa shrek",
+                      "test",
                       "24.20",
                     ),
                     const SizedBox(
@@ -184,197 +182,158 @@ class _HomePageState extends State<HomePage>
                 ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    muebles(
-                      "assets/pict/m1.jpg",
-                      "gabetero gris",
-                      "hola",
+                    menus(
+                      "assets/pict/pizza01.jpg",
+                      "pizza sabrosa",
+                      "test",
                       "70.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/m2.jpg",
-                      "librero",
-                      "hola",
+                    menus(
+                      "assets/pict/pizza02.jpg",
+                      "pizza cremosa",
+                      "test",
                       "1.000.000",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/m3.jpg",
-                      "juguetera",
-                      "hola",
+                    menus(
+                      "assets/pict/pizza03.jpg",
+                      "pizza jugosa",
+                      "test",
                       "19.99",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/m4.jpg",
-                      "mueble gris",
-                      "hola",
+                    menus(
+                      "assets/pict/pizza04.jpg",
+                      "pizza calsone",
+                      "test",
                       "40.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/m5.jpg",
-                      "mueble para tv",
-                      "hola",
-                      "60.00",
-                    ),
-                    const SizedBox(
-                      width: 15.0,
-                    ),
                   ],
                 ),
                 ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    muebles(
-                      "assets/pict/c1.jpg",
-                      "base para cama",
-                      "hola",
+                    menus(
+                      "assets/pict/pollo01.jpg",
+                      "pollo lito",
+                      "test",
                       "80.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/c2.jpg",
-                      "conchon",
-                      "hola",
+                    menus(
+                      "assets/pict/pollo02.jpg",
+                      "pollo sabroso",
+                      "test",
                       "100.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/c3.jpg",
-                      "cama",
-                      "hola",
+                    menus(
+                      "assets/pict/pollo03.jpg",
+                      "pollo delicious",
+                      "test",
                       "150.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/c4.jpg",
-                      "cama matrimonial",
-                      "hola",
+                    menus(
+                      "assets/pict/pollo04.jpg",
+                      "pollo grand",
+                      "test",
                       "200.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/c5.jpg",
-                      "cama grande",
-                      "hola",
-                      "250.00",
-                    ),
-                    const SizedBox(
-                      width: 15.0,
-                    ),
                   ],
                 ),
                 ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    muebles(
-                      "assets/pict/cc1.jpg",
-                      "cuna",
-                      "hola",
+                    menus(
+                      "assets/pict/tacos01.jpg",
+                      "tacos pastor",
+                      "test",
                       "100.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/cc2.jpg",
-                      "cuna gabetero",
-                      "hola",
+                    menus(
+                      "assets/pict/tacos02.jpg",
+                      "tacos pollo",
+                      "test",
                       "4.20",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/cc3.jpg",
-                      "cuna gris",
-                      "hola",
+                    menus(
+                      "assets/pict/tacos03.jpg",
+                      "taco mer",
+                      "test",
                       "150.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/cc4.jpg",
-                      "cama cuna",
-                      "hola",
+                    menus(
+                      "assets/pict/tacos04.jpg",
+                      "tacos mix",
+                      "test",
                       "250.00",
-                    ),
-                    const SizedBox(
-                      width: 15.0,
-                    ),
-                    muebles(
-                      "assets/pict/cc5.jpg",
-                      "cuna blanca",
-                      "hola",
-                      "120.00",
-                    ),
-                    const SizedBox(
-                      width: 15.0,
                     ),
                   ],
                 ),
                 ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    muebles(
-                      "assets/pict/p1.jpg",
-                      "pintura rosada",
-                      "hola",
+                    menus(
+                      "assets/pict/pupas01.jpg",
+                      "pupas revueltas",
+                      "test",
                       "10.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/p2.jpg",
-                      "pintura abstracta",
-                      "hola",
+                    menus(
+                      "assets/pict/pupas02.jpg",
+                      "pupas cochinito",
+                      "test",
                       "20.00",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/p3.jpg",
-                      "pintura azul",
-                      "hola",
+                    menus(
+                      "assets/pict/pupas03.jpg",
+                      "pupas moradas",
+                      "test",
                       "4.20",
                     ),
                     const SizedBox(
                       width: 15.0,
                     ),
-                    muebles(
-                      "assets/pict/p4.jpg",
-                      "pintura gris",
-                      "hola",
+                    menus(
+                      "assets/pict/pupas04.jpg",
+                      "pupas ayote",
+                      "test",
                       "11.00",
-                    ),
-                    const SizedBox(
-                      width: 15.0,
-                    ),
-                    muebles(
-                      "assets/pict/p5.jpg",
-                      "pintura loro",
-                      "hola",
-                      "7.00",
                     ),
                     const SizedBox(
                       width: 15.0,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parcial2_etps3/page.dart';
+import 'package:parcial2_etps3/menusComensal.dart';
 
 void main() {
   runApp(MyApp());

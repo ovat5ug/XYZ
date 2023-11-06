@@ -3,13 +3,13 @@ import 'package:flutter/rendering.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:parcial2_etps3/detalle.dart';
 
-class muebles extends StatelessWidget {
+class menus extends StatelessWidget {
   late String image;
   late String title;
   late String flavour;
   late String price;
 
-  muebles(this.image, this.title, this.flavour, this.price);
+  menus(this.image, this.title, this.flavour, this.price);
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +85,7 @@ class muebles extends StatelessWidget {
                                 //INICIO titulo
                                 title,
                                 style: const TextStyle(
-                                    fontSize: 17.0,
+                                    fontSize: 10.0,
                                     fontWeight: FontWeight.w900,
                                     letterSpacing: 1,
                                     color: Colors.white),
